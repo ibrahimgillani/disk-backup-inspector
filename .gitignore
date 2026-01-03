@@ -1,0 +1,14 @@
+# Backup archives (generated files – never commit)
+*.tar
+*.tar.gz
+*.zip
+
+# Logs
+*.log
+
+# Temporary files
+/tmp/
+
+# Editor / OS junk
+*.swp
+*.bak
