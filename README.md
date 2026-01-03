@@ -1,18 +1,20 @@
-# Disk Backup Inspector
 
-A simple Linux shell script that inspects disk usage and creates safe backups of directories using `tar` and `rsync`.
+A Linux shell tool that inspects disk usage, checks mounted filesystems,
+and safely creates backups using `tar` and `rsync` dry-runs.
 
-This project is built to practice Linux filesystem concepts, disk inspection, and backup automation.
+This project is built to strengthen Linux filesystem, backup,
+and scripting concepts.
 
 ---
 
 ## Features
 
-- Displays disk usage summary (`df -h`)
-- Creates compressed backups using `tar`
-- Supports timestamped backup files
-- Performs safe `rsync` dry-run before syncing
-- Avoids committing backup archives using `.gitignore`
+- Disk usage summary (`df -h`)
+- Interactive directory backup selection
+- Compressed `.tar.gz` backups
+- Safe `rsync --dry-run` preview
+- Ignores sockets, temp files, and logs
+- Designed for learning Linux internals
 
 ---
 
@@ -21,13 +23,12 @@ This project is built to practice Linux filesystem concepts, disk inspection, an
 - Linux system
 - Bash shell
 - `tar`, `rsync`, `df`
-- Sudo access (for disk inspection)
+- Sudo access (optional for system paths)
 
 ---
 
 ## Usage
 
-Make the script executable:
-
 ```bash
 chmod +x disk_backup_inspector.sh
+./disk_backup_inspector.sh
